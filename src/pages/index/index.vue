@@ -1,16 +1,28 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
+    <button @click="onAdd">自增{{ count }}</button>
+    <button @click="onRandom">随机数{{ test }}</button>
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
+import { ref, computed } from 'vue'
+
+import { useStore } from '@/store'
 import { a } from '@/hooks'
+
+const store = useStore()
+const count = computed(() => store.state.testModule.count)
+const test = computed(() => store.state.test)
+const onRandom = () => {
+  store.commit('CHANGE_TEST', Math.random())
+}
+
+const onAdd = () => {
+  store.commit('testModule/ADD_COUNT')
+}
+
+const title = ref('Hello')
 console.log(14, a)
 </script>
 
