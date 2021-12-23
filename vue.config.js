@@ -1,3 +1,5 @@
+const path = require('path')
+
 process.env.UNI_USING_VUE3 = true
 process.env.UNI_USING_VUE3_OPTIONS_API = true
 module.exports = {
@@ -11,6 +13,9 @@ module.exports = {
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.ts', '.vue', '.json'],
+      alias: {
+        '@': path.join(__dirname, './src'),
+      },
     },
   },
 }

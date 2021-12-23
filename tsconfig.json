@@ -11,7 +11,10 @@
     "esModuleInterop": true,
     "noImplicitAny": false, // 允许any
     "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"]
+    "types": ["@dcloudio/types"],
+    "paths": {
+      "@*": ["./src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

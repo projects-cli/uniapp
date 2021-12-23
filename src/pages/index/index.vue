@@ -10,6 +10,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 const title = ref('Hello')
+import { a } from '@/hooks'
+console.log(14, a)
 </script>
 
 <style>
