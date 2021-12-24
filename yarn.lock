@@ -1259,6 +1259,11 @@
     vue-router "^4.0.12"
     xmlhttprequest "^1.8.0"
 
+"@dcloudio/uni-helper-json@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.npmmirror.com/@dcloudio/uni-helper-json/download/@dcloudio/uni-helper-json-1.0.13.tgz#4e8aa062daaefb30d98973c035a7b0ab628329c7"
+  integrity sha1-ToqgYtqu+zDZiXPANaewq2KDKcc=
+
 "@dcloudio/uni-i18n@3.0.0-alpha-3030220211217009":
   version "3.0.0-alpha-3030220211217009"
   resolved "https://registry.yarnpkg.com/@dcloudio/uni-i18n/-/uni-i18n-3.0.0-alpha-3030220211217009.tgz#34b977a8c16050d64ea7711772e44bc60692e4b6"
@@ -5912,17 +5917,9 @@ sass-graph@2.2.5:
     scss-tokenizer "^0.2.3"
     yargs "^13.3.2"
 
-sass-loader@^12.1.0:
+sass-loader@^12.1.0, sass-loader@^12.4.0:
   version "12.4.0"
   resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-12.4.0.tgz#260b0d51a8a373bb8e88efc11f6ba5583fea0bcf"
-  integrity sha512-7xN+8khDIzym1oL9XyS6zP6Ges+Bo2B2xbPrjdMHEYyV3AQYhd/wXeru++3ODHF0zMjYmVadblSKrPrjEkL8mg==
-  dependencies:
-    klona "^2.0.4"
-    neo-async "^2.6.2"
-
-sass-loader@^12.4.0:
-  version "12.4.0"
-  resolved "https://registry.npmmirror.com/sass-loader/download/sass-loader-12.4.0.tgz#260b0d51a8a373bb8e88efc11f6ba5583fea0bcf"
   integrity sha512-7xN+8khDIzym1oL9XyS6zP6Ges+Bo2B2xbPrjdMHEYyV3AQYhd/wXeru++3ODHF0zMjYmVadblSKrPrjEkL8mg==
   dependencies:
     klona "^2.0.4"

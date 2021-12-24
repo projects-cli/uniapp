@@ -13,7 +13,6 @@ import { ref, computed } from 'vue'
 
 import { useStore } from '@/store'
 import { a } from '@/hooks'
-
 const store = useStore()
 const count = computed(() => store.state.testModule.count)
 const test = computed(() => store.state.test)

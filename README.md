@@ -12,6 +12,8 @@
 
   - 全局提示样式
     - scss [vscode 地址](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss)
+  - 使 vscode 拥有智能提示[参考](https://ask.dcloud.net.cn/article/36286)
+    - vetur vue 语法提示 [vscode 地址](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
 <h3>二、项目启动</h3>
 
@@ -53,22 +55,11 @@
 <h3>五、项目结构</h3>
 
 ```
-public
-    |--images                  // 图片静态资源
 src
-    |--mobile
-    |--public               // css、js、静态文件等
-        |--common
-            |--less         // less文件
-            |--css          // less文件编译成功之后的存放位置
-    |--views                // pc端项目
-        |--common
-        |--en               //英文页面
-        |--zh-cn            // 中文页面
-            |--mobile
-                |--landing  // langding页
-            |-- partials    // 公用组件
-                |--my_nav.ejs// 头部导航栏
-routes.js                   // pc端路由
+    |--components               // 组件
+    |--hooks                    // hooks
+        |--query                // 请求
+    |--pages                    // 页面
+        |--home                 // 首页
 
 ```
