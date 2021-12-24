@@ -8,13 +8,25 @@ const testModule: Module<TestModuleTypes, RootStateTypes> = {
   namespaced: process.env.NODE_ENV !== 'production',
   state: {
     count: 0,
+    random: 0,
   },
   mutations: {
+    // 同步使用mutation
     ADD_COUNT(state) {
       state.count += 1
     },
+    RANDOM_TEST(state, payload) {
+      state.random = payload
+    },
   },
-  actions: {},
+  actions: {
+    // 异步使用action
+    CHANGE_TEST(context, action) {
+      setTimeout(() => {
+        context.commit('RANDOM_TEST', action.payload)
+      })
+    },
+  },
   modules: {},
 }
 
