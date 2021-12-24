@@ -34,20 +34,38 @@
   "tabBar": {
     "borderStyle": "black",
     "backgroundColor": "#FFFFFF",
-    "color": "#8F8F94",
-    "selectedColor": "#f33e54",
+    "color": "#999999",
+    "selectedColor": "#FD6E3A",
     "list": [
       {
         "pagePath": "pages/home/home",
-        "iconPath": "static/logo.png",
+        "iconPath": "static/img/home_tab_unselect.png",
         "selectedIconPath": "static/logo.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/mine/mine",
-        "iconPath": "static/logo.png",
+        "iconPath": "static/img/home_tab_unselect.png",
         "selectedIconPath": "static/logo.png",
-        "text": "关注"
+        "text": "点单"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/img/home_tab_unselect.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "会员"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/img/home_tab_unselect.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/img/home_tab_unselect.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "我的"
       }
     ]
   }
