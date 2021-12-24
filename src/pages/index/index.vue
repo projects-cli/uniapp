@@ -3,8 +3,9 @@
     <button @click="onAdd">自增{{ count }}</button>
     <button @click="onRandom">随机数{{ random }}</button>
     <uni-badge text="1"></uni-badge>
-    <uni-tag text="标签">fdfdfd</uni-tag>
+    <uni-tag text="标签" />
     <uni-icons class="icon" type="locked" size="24" />
+    <view class="title">fddff</view>
   </view>
 </template>
 
@@ -41,4 +42,8 @@ const title = ref('Hello')
 console.log(14, a)
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.title {
+  color: $uni-primary;
+}
+</style>
