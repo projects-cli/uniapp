@@ -1,8 +1,5 @@
 <template>
-  <view class="content">
-    <view>home</view>
-    <view>home</view>
-  </view>
+  <view>会员</view>
 </template>
 
 <script setup lang="ts"></script>
