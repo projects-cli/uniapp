@@ -1,4 +1,5 @@
 <h3>一、项目配置</h3>
+说明：项目使用cli命令行生成。
 
 - 安装 node >= 14
 - 安装 yarn npm i -g yarn tip: 尽量使用 yarn
@@ -12,8 +13,11 @@
 
   - 全局提示样式
     - scss [vscode 地址](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss)
-  - 使 vscode 拥有智能提示[参考](https://ask.dcloud.net.cn/article/36286)
+  - 使 vscode 智能提示 uni-app 语法提示和 5+App 语法 [参考](https://ask.dcloud.net.cn/article/36286)
+
     - vetur vue 语法提示 [vscode 地址](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+
+  - webstorm 智能提示 uni-app 语法提示和 5+App 语法 [地址](https://ask.dcloud.net.cn/article/36307)
 
 <h3>二、项目启动</h3>
 
@@ -52,6 +56,11 @@
 
 [地址](https://next.vuex.vuejs.org/zh/index.html) 一个专为 Vue.js 应用程序开发的状态管理模式 + 库。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
 
+<h5>uni-ui</h5>
+
+[演示](http://vue3-hellouniapp.dcloud.net.cn/pages/component/view/view)
+[api](https://uniapp.dcloud.io/component/uniui/uni-ui) UI 库使用 uni-ui
+
 <h3>五、项目结构</h3>
 
 ```
@@ -63,3 +72,7 @@ src
         |--home                 // 首页
 
 ```
+
+<h3>六、开发说明</h3>
+
+- uni-ui 使用 npm + easycom 方式引入，使用 uni-ui 扩展组件时不需要 import 导入，直接使用即可。
