@@ -3,12 +3,13 @@
     <button @click="onAdd">自增{{ count }}</button>
     <button @click="onRandom">随机数{{ test }}</button>
     <uni-badge text="1"></uni-badge>
+    <uni-tag text="标签">fdfdfd</uni-tag>
+    <uni-icons class="icon" type="locked" size="24" />
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { uniBadge } from '@dcloudio/uni-ui'
 
 import { useStore } from '@/store'
 import { a } from '@/hooks'
