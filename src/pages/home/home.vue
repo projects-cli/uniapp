@@ -19,7 +19,7 @@
     </swiper>
     <view class="user-info-view">
       <view class="user-info-content">
-        <img src="../static/img/home_tab_unselect.png" class="user-info-content-img" />
+        <img src="../../static/img/tab/tab_unselect.png" class="user-info-content-img" />
         <view class="user-info-content-body">
           <text class="user-info-content-body-name">昵称</text>
           <text class="user-info-content-body-time">永久有效</text>
@@ -40,17 +40,28 @@
     <view class="order-view">
       <view class="order-view-head">
         <view class="order-view-head-item">
-          <img src="../static/img/home_tab_unselect.png" class="order-view-head-item-img" />
+          <img src="../../static/img/tab/tab_unselect.png" class="order-view-head-item-img" />
           <text>自提</text>
         </view>
+        <view class="order-view-head-line" />
         <view class="order-view-head-item">
-          <img src="../static/img/home_tab_unselect.png" class="order-view-head-item-img" />
+          <img src="../../static/img/tab/tab_unselect.png" class="order-view-head-item-img" />
           <text>外卖</text>
         </view>
       </view>
-      <view class="order-view-bottom"></view>
+      <view class="order-view-center-line" />
+      <view class="order-view-bottom">
+        <view class="order-view-bottom-item">
+          <img class="order-view-bottom-item-img" src="../../static/img/tab/tab_unselect.png" />
+          <text>团餐</text>
+        </view>
+        <view class="order-view-bottom-item">
+          <img class="order-view-bottom-item-img" src="../../static/img/tab/tab_unselect.png" />
+          <text>拼单</text>
+        </view>
+      </view>
     </view>
-    <view class="user-new-view">
+    <view class="user-new-view" @click="onLoginClick">
       <text>新人专享</text>
     </view>
     <view class="product-new-view-head">
@@ -58,27 +69,58 @@
       <text>爆款推荐</text>
       <view class="product-new-view-head-right" />
     </view>
-    <view class="product-new-view"> </view>
+    <view class="product-new-view">
+      <view class="product-new-view-item">
+        <product-new-item />
+      </view>
+      <view class="product-new-view-item">
+        <product-new-item />
+      </view>
+      <view class="product-new-view-item">
+        <product-new-item />
+      </view>
+    </view>
   </view>
 </template>
 
 <script>
+import ProductNewItem from './components/product-new-item'
+import UniGrid from '@/components/uni-ui/uni-grid/uni-grid'
+import UniGridItem from '@/components/uni-ui/uni-grid-item/uni-grid-item'
+
 export default {
-  data() {
+  components: { UniGridItem, UniGrid, ProductNewItem },
+  data () {
     return {
       title: 'Hello',
       indicatorDots: false,
       autoplay: true,
       interval: 2000,
-      duration: 500,
+      duration: 500
     }
   },
-  onLoad() {},
-  methods: {},
+  onLoad () {},
+  methods: {
+    onLoginClick () {
+      uni.login({
+        provider: 'weixin',
+        success: function (loginRes) {
+          console.log(loginRes.authResult)
+          // 获取用户信息
+          uni.getUserInfo({
+            provider: 'weixin',
+            success: function (infoRes) {
+              console.log('用户昵称为：' + JSON.stringify(infoRes.userInfo))
+            }
+          })
+        }
+      })
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
 .home_root {
   display: flex;
   flex-direction: column;
@@ -188,8 +230,7 @@ export default {
 
 .user-info-coupon-line {
   height: 60%;
-  width: 0.5px;
-  background-color: red;
+  border: 0.1rpx solid #eaeaea;
 
   margin-left: 10rpx;
   margin-right: 10rpx;
@@ -199,12 +240,10 @@ export default {
   width: 90%;
   height: 380rpx;
   margin-top: 20rpx;
-
   display: flex;
   flex-direction: column;
 
   border-radius: 10rpx;
-  background-color: pink;
 
   justify-content: center;
   justify-items: center;
@@ -214,6 +253,14 @@ export default {
   display: flex;
   flex-direction: row;
   height: 300rpx;
+
+  align-content: center;
+  align-items: center;
+}
+
+.order-view-head-line {
+  height: 134rpx;
+  border: 1px solid #e3e3e3;
 }
 
 .order-view-head-item {
@@ -239,9 +286,45 @@ export default {
   color: #000000;
 }
 
+.order-view-center-line {
+  width: 60%;
+  height: 1px;
+  border: 1px solid #e3e3e3;
+
+  align-self: center;
+}
+
 .order-view-bottom {
   display: flex;
   flex-direction: row;
+  width: 100%;
+
+  align-items: center;
+  align-content: center;
+}
+
+.order-view-bottom-item {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 81rpx;
+
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.order-view-bottom-item-img {
+  height: 17px;
+  width: 17px;
+}
+
+.order-view-bottom-item text {
+  font-size: 10px;
+  font-weight: 300;
+  color: #000000;
+  margin-left: 2rpx;
 }
 
 .user-new-view {
@@ -294,13 +377,19 @@ export default {
 
 .product-new-view {
   width: 90%;
-  height: 217rpx;
+  //height: 217rpx;
   margin-top: 20rpx;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   border-radius: 10rpx;
   background-color: blue;
+}
+
+.product-new-view-item {
+  width: 50%;
+  height: 443rpx;
 }
 </style>

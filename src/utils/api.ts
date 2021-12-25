@@ -1,3 +1,5 @@
+import uni from "@dcloudio/vite-plugin-uni";
+
 const commoneUrl = 'http://192.168...' //公共路径
 const userId = uni.getStorageSync('userinfo_Data').id //用户id
 
