@@ -40,31 +40,27 @@
       {
         "pagePath": "pages/home/home",
         "iconPath": "static/img/home_tab_unselect.png",
-        "selectedIconPath": "static/logo.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "static/img/home_tab_unselect.png",
-        "selectedIconPath": "static/logo.png",
         "text": "点单"
       },
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "static/img/home_tab_unselect.png",
-        "selectedIconPath": "static/logo.png",
         "text": "会员"
       },
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "static/img/home_tab_unselect.png",
-        "selectedIconPath": "static/logo.png",
         "text": "订单"
       },
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "static/img/home_tab_unselect.png",
-        "selectedIconPath": "static/logo.png",
+        "selectedIconPath": "static/img/home_tab_unselect.png",
         "text": "我的"
       }
     ]

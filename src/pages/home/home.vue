@@ -53,7 +53,12 @@
     <view class="user-new-view">
       <text>新人专享</text>
     </view>
-    <view class="product-new-view"></view>
+    <view class="product-new-view-head">
+      <view class="product-new-view-head-left" />
+      <text>爆款推荐</text>
+      <view class="product-new-view-head-right" />
+    </view>
+    <view class="product-new-view"> </view>
   </view>
 </template>
 
@@ -81,20 +86,24 @@ export default {
   align-content: center;
   align-items: center;
 }
+
 .swiper {
   height: 750rpx;
   width: 100%;
 
   background-color: red;
 }
+
 .swiper-item-red {
   background-color: red;
   height: 100%;
 }
+
 .swiper-item-blue {
   background-color: blue;
   height: 100%;
 }
+
 .user-info-view {
   width: 90%;
   height: 137rpx;
@@ -113,6 +122,7 @@ export default {
 
   z-index: 10;
 }
+
 .user-info-content {
   display: flex;
   flex-direction: row;
@@ -137,6 +147,7 @@ export default {
   text-align: left;
   margin-left: 20rpx;
 }
+
 .user-info-content-body-name {
   font-size: 11px;
   font-weight: 400;
@@ -168,19 +179,22 @@ export default {
   align-items: center;
   text-align: center;
 }
+
 .user-info-coupon text {
   font-size: 12px;
   font-weight: 400;
   color: #000000;
 }
+
 .user-info-coupon-line {
-  height: 80%;
-  widows: 5px;
+  height: 60%;
+  width: 0.5px;
   background-color: red;
 
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
 }
+
 .order-view {
   width: 90%;
   height: 380rpx;
@@ -190,7 +204,7 @@ export default {
   flex-direction: column;
 
   border-radius: 10rpx;
-  background-color: blue;
+  background-color: pink;
 
   justify-content: center;
   justify-items: center;
@@ -201,6 +215,7 @@ export default {
   flex-direction: row;
   height: 300rpx;
 }
+
 .order-view-head-item {
   width: 50%;
   height: 100%;
@@ -214,7 +229,9 @@ export default {
 
 .order-view-head-item-img {
   width: 22px;
+  height: 50px;
 }
+
 .order-view-head-item text {
   margin-top: 22rpx;
   font-size: 18px;
@@ -238,6 +255,7 @@ export default {
   border-radius: 10rpx;
   background-color: blue;
 }
+
 .user-new-view text {
   font-size: 18px;
   font-weight: 500;
@@ -246,12 +264,34 @@ export default {
   margin-left: 20rpx;
   margin-top: 20rpx;
 }
+
 .product-new-view-head {
   display: flex;
   flex-direction: row;
   align-content: center;
   align-items: center;
 }
+
+.product-new-view-head text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.product-new-view-head-left {
+  width: 200rpx;
+  height: 1px;
+  border: 1px solid;
+  border-image: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1)) 1 1;
+}
+
+.product-new-view-head-right {
+  width: 200rpx;
+  height: 1px;
+  border: 1px solid;
+  border-image: linear-gradient(249deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1)) 1 1;
+}
+
 .product-new-view {
   width: 90%;
   height: 217rpx;

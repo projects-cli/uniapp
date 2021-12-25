@@ -70,7 +70,7 @@ module.exports = {
   //     { name: 'core/middlewares' },
   //     { name: 'core/pipes' },
   //     { name: 'core/setup' },
-  //     { name: 'core' },
+  //     { name: 'core' },`
   //     { name: 'models' },
   //     { name: 'shared' },
   //     { name: '账号模块' },
