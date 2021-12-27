@@ -45,18 +45,18 @@ module.exports = {
       value: 'revert',
       name: '回滚某个更早之前的提交',
     },
-    // {
-    //   value: 'merge',
-    //   name: '分支合并 Merge branch',
-    // },
-    // {
-    //   value: 'config',
-    //   name: '修改或添加配置文件',
-    // },
-    // {
-    //   value: 'WIP',
-    //   name: '开发中',
-    // },
+    {
+      value: 'merge',
+      name: '分支合并 Merge branch',
+    },
+    {
+      value: 'config',
+      name: '修改或添加配置文件',
+    },
+    {
+      value: 'WIP',
+      name: '开发中',
+    },
   ],
   // 自定义scopes
   //   scopes: [
@@ -70,7 +70,7 @@ module.exports = {
   //     { name: 'core/middlewares' },
   //     { name: 'core/pipes' },
   //     { name: 'core/setup' },
-  //     { name: 'core' },
+  //     { name: 'core' },`
   //     { name: 'models' },
   //     { name: 'shared' },
   //     { name: '账号模块' },
